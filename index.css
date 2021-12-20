@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+header {
+    height: 100px;
+    background-color: red;
+}
+nav {
+    padding: 20px 15px;
+    background-color: yellow;
+}
+.nav__container {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.nav__item {
+    margin-right: 20px;
+    display: inline;
+    font-size: 20px;
+}
+#sidebar {
+    background-color: pink;
+    width: 70%;
+    height: 100%;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: -2000px;
+    transition: left 0.5s;
+    padding: 10px;
+}
+.container {
+    margin-top: 10px;
+    background-color: aqua;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-row-gap: 50px; 
+}
+.item {
+    background-color: blue;
+    padding: 20px;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    border: 1px solid black;
+}
+.item1 {
+    grid-column: 1 / 4;
+}
+.btn__bars {
+    font-size: 20px;
+    display: none;
+}
+.btn__bars i {
+    
+}
+.sidebar__nav {
+    list-style-type: none;
+    padding: 0;
+}
+.sidebar__nav li {
+    margin: 10px 0;
+    font-weight: 700;   
+}
+.sidebar__nav li:hover {
+    background-color: aliceblue;   
+}
+/* Nhỏ hơn 800px thì vào đây */
+@media screen and (max-width: 800px) { 
+    .container {
+        grid-template-columns: auto auto;
+    }
+    nav {
+        padding: 5px 5px;
+        background-color: yellow;
+    }
+    .nav__container {
+        display: none;
+    }
+    .btn__bars {
+        display: block;
+    }
+}
